@@ -7,46 +7,8 @@ public class ManipulationStrings {
 
     private static final String EMPTY_STRING_ERROR = "Entrada Invalida.";
 
-    public static void main(String[] args) {
-        try {
-            System.out.println("1. Reverta a ordem das palavras nas frases, mantendo a ordem das palavras:");
-            String input1 = entradaUsuario("Informe a frase:");
-            String output1 = inverterPalavras(input1);
-            System.out.println(output1);
-
-            System.out.println("2. Remova todos os caracteres duplicados da string abaixo:");
-            String input2 = entradaUsuario("Informe a frase:");
-            String output2 = removerDuplicados(input2);
-            System.out.println(output2);
-
-            System.out.println("3. Encontre a substring palindroma mais longa na string abaixo:");
-            String input3 = entradaUsuario("Informe a string:");
-            String output3 = maiorPalindrome(input3);
-            System.out.println(output3);
-
-            System.out.println("4. Coloque em maiúscula a primeira letra de cada frase na string:");
-            String input4 = entradaUsuario("Informe a frase:");
-            String output4 = capitalizeFrase(input4);
-            System.out.println(output4);
-
-            System.out.println("5. Verifique se a string é um anagrama de um palindromo:");
-            String input5 = entradaUsuario("Informe a string:");
-            String output5 = anagramaPalindrome(input5);
-            System.out.println(output5);
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    private static String entradaUsuario(String message) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print(message);
-        String input = scanner.nextLine();
-        while (input == null || input.isEmpty()) {
-            System.out.println("Entrada inválida. Por favor, informe novamente:");
-            input = scanner.nextLine();
-        }
-        return input;
+    public static void separador(){
+        System.out.println("------------------------------------------");
     }
 
     private static void validarEntrada(String valor) {
