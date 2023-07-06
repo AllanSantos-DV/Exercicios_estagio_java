@@ -65,7 +65,7 @@ public class ManipulationStrings {
     public static String capitalizeFrase(String string) {
         validarEntrada(string);
 
-        return Arrays.stream(string.split("(?<=\\.\\s)|(?<=\\?\\s)"))
+        return Arrays.stream(string.split("(?<=\\.\\s)|(?<=\\?\\s)|(?<=\\!\\s)|(?<=\\:\\s)"))
                 .map(sentence -> sentence.isEmpty() ? sentence : Character.toUpperCase(sentence.charAt(0)) + sentence.substring(1))
                 .collect(Collectors.joining());
     }
@@ -84,5 +84,4 @@ public class ManipulationStrings {
 
         return oddCount <= 1 ? "true" : "false";
     }
-
 }
