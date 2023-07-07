@@ -5,20 +5,22 @@ Este repositório contém a resolução dos Exercicios de manipulação de strin
 Cada desafio foi resolvido em uma função independente que recebe uma String  e retorna a saída como uma string.
 
 ## Menu
+- ## Execução
+  - ### Executar Exercicios no site: [`myCompiler`](https://www.mycompiler.io/view/CYaRYi7XGaS)
 
-- Exercicios
+- ### Exercicios
   - [**Exercicio 1:** *Reverter a ordem das palavras nas frases, mantendo a ordem das palavras.*](#exercicio-1)
   - [**Exercicio 2:** *Remover todos os caracteres duplicados da string.*](#exercicio-2)
   - [**Exercicio 3:** *Encontrar a substring palíndroma mais longa.*](#exercicio-3)
   - [**Exercicio 4:** *Colocar em maiúscula a primeira letra de cada frase na string.*](#exercicio-4)
   - [**Exercicio 5:** *Verificar se a string é um anagrama de um palíndromo.*](#exercicio-5)
-- Testes com JUnit
+- ### Testes com JUnit
   - [**Exercicio 1:** *Reverter a ordem das palavras nas frases, mantendo a ordem das palavras.*](#teste-exercicio-1)
   - [**Exercicio 2:** *Remover todos os caracteres duplicados da string.*](#teste-exercicio-2)
   - [**Exercicio 3:** *Encontrar a substring palíndroma mais longa.*](#teste-exercicio-3)
   - [**Exercicio 4:** *Colocar em maiúscula a primeira letra de cada frase na string.*](#teste-exercicio-4)
   - [**Exercicio 5:** *Verificar se a string é um anagrama de um palíndromo.*](#teste-exercicio-5)
-- [Observações](#observações)
+- ### [Observações](#observações)
 
 ## Exercicio 1
 
