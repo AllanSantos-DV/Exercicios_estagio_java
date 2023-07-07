@@ -7,7 +7,7 @@ Cada desafio foi resolvido em uma função independente que recebe uma String  e
 ## Menu
 - ## Execução
   - ### Executar Exercicios no site: [`myCompiler`](https://www.mycompiler.io/view/CYaRYi7XGaS)
-
+    * ***Obervação:*** O exercicio aparesentado no site foi devidamente modificado para ser executado no ambiente do site.
 - ### Exercicios
   - [**Exercicio 1:** *Reverter a ordem das palavras nas frases, mantendo a ordem das palavras.*](#exercicio-1)
   - [**Exercicio 2:** *Remover todos os caracteres duplicados da string.*](#exercicio-2)
