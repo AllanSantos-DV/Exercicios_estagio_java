@@ -103,16 +103,16 @@ A função `maiorPalindrome` recebe uma string como entrada. A função gera tod
 
 **Descrição: Colocar em maiúscula a primeira letra de cada frase na string.**
 
-Neste exercício, a tarefa é transformar a primeira letra de cada frase em uma string em maiúscula. As frases são identificadas com base em pontuações como ponto final (.) ou ponto de interrogação (?), e a primeira letra de cada frase é convertida para maiúscula.
+Neste exercício, a tarefa é transformar a primeira letra de cada frase em maiúsculo. As frases são identificadas com base em pontuações como ponto final (.), ponto de interrogação (?), ponto de esclamação (!) e dois pontos (:), a primeira letra de cada frase é convertida para maiúscula.
 
 #### Resolução:
-A função `capitalizeFrase` recebe uma string como entrada. A string é dividida em frases, usando os pontos finais (.) e pontos de interrogação (?) como delimitadores. Em seguida, a primeira letra de cada frase é convertida para maiúscula. As frases modificadas são concatenadas novamente em uma nova string.
+A função `capitalizeFrase` recebe uma string como entrada. A string é dividida em frases, usando os pontos finais (.), pontos de interrogação (?), pontos de esclamações (!) e dois pontos (:) como delimitadores. Em seguida, a primeira letra de cada frase é convertida para maiúscula. As frases modificadas são concatenadas novamente em uma nova string.
 
 ```
     public static String capitalizeFrase(String string) {
         validarEntrada(string);
 
-        return Arrays.stream(string.split("(?<=\\.\\s)|(?<=\\?\\s)"))
+        return Arrays.stream(string.split("(?<=\\.\\s)|(?<=\\?\\s)|(?<=\\!\\s)|(?<=\\:\\s)"))
                 .map(sentence -> sentence.isEmpty() ? sentence : Character.toUpperCase(sentence.charAt(0)) + sentence.substring(1))
                 .collect(Collectors.joining());
     }
