@@ -7,7 +7,7 @@ public class ManipulationStrings {
 
     private static final String EMPTY_STRING_ERROR = "Entrada Invalida.";
 
-    public static void separador(){
+    public static void separador() {
         System.out.println("------------------------------------------");
     }
 
@@ -30,8 +30,8 @@ public class ManipulationStrings {
 
         return string.chars()
                 .distinct()
-                .mapToObj(c -> String.valueOf((char) c))
-                .collect(Collectors.joining());
+                .collect(StringBuilder::new, (sb, c) -> sb.append((char) c), StringBuilder::append)
+                .toString();
     }
 
     public static String maiorPalindrome(String string) {
@@ -41,31 +41,19 @@ public class ManipulationStrings {
                 .mapToObj(i -> IntStream.rangeClosed(i, string.length())
                         .mapToObj(j -> string.substring(i, j)))
                 .flatMap(Function.identity())
-                .filter(ManipulationStrings::isPalindrome)
+                .filter(s -> {
+                    String reversed = new StringBuilder(s).reverse().toString();
+                    return s.equals(reversed);
+                })
                 .max(Comparator.comparingInt(String::length));
 
         return longestPalindrome.orElse("");
     }
 
-    private static boolean isPalindrome(String string) {
-        int left = 0;
-        int right = string.length() - 1;
-
-        while (left < right) {
-            if (string.charAt(left) != string.charAt(right)) {
-                return false;
-            }
-            left++;
-            right--;
-        }
-
-        return true;
-    }
-
     public static String capitalizeFrase(String string) {
         validarEntrada(string);
 
-        return Arrays.stream(string.split("(?<=\\.\\s)|(?<=\\?\\s)|(?<=\\!\\s)|(?<=\\:\\s)"))
+        return Arrays.stream(string.toLowerCase().split("(?<=\\.\\s)|(?<=\\?\\s)|(?<=\\!\\s)|(?<=\\:\\s)"))
                 .map(sentence -> sentence.isEmpty() ? sentence : Character.toUpperCase(sentence.charAt(0)) + sentence.substring(1))
                 .collect(Collectors.joining());
     }
@@ -75,7 +63,7 @@ public class ManipulationStrings {
 
         Map<Character, Long> charFrequencyMap = string.chars()
                 .mapToObj(c -> (char) c)
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+                .collect(Collectors.toMap(Function.identity(), c -> 1L, Long::sum));
 
         long oddCount = charFrequencyMap.values()
                 .stream()
@@ -84,4 +72,5 @@ public class ManipulationStrings {
 
         return oddCount <= 1 ? "true" : "false";
     }
+
 }
