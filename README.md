@@ -143,7 +143,7 @@ A classe TestUnitRunner contém os seguintes métodos:
 * #### Variaveis utilizadas
 
 ```java
-    static String string1="Hello, World! OpenAI is amazing.";
+static String string1="Hello, World! OpenAI is amazing.";
 static String res1="amazing. is OpenAI World! Hello,";
 
 static String string2="Hello, World!";
