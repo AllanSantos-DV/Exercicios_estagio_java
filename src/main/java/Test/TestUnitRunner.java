@@ -1,8 +1,11 @@
+package Test;
+
 import Methodos.*;
-import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ManipulationStringsTest {
+import static org.junit.Assert.assertEquals;
+
+public class TestUnitRunner {
 
     static String string1 = "Hello, World! OpenAI is amazing.";
     static String res1 = "amazing. is OpenAI World! Hello,";
@@ -22,31 +25,31 @@ public class ManipulationStringsTest {
     @Test
     public void inverterPalavrasTest() {
         String resultado = InverterPalavas.inverterPalavras(string1);
-        TestCase.assertEquals(res1, resultado);
+        assertEquals(res1, resultado);
     }
 
     @Test
     public void removerDuplicadosTest() {
         String resultadoRemocao = RemoverDuplicado.removerDuplicados(string2);
-        TestCase.assertEquals(res2, resultadoRemocao);
+        assertEquals(res2, resultadoRemocao);
     }
 
     @Test
     public void maiorPalindromoTest() {
         String resultadoMaiorPalindromo = MaiorPalindromo.maiorPalindromo(string3);
-        TestCase.assertEquals(res3, resultadoMaiorPalindromo);
+        assertEquals(res3, resultadoMaiorPalindromo);
     }
 
     @Test
     public void formatarFraseTest() {
         String resultadoFormated = FormatarFrase.formatarFrase(string4);
-        TestCase.assertEquals(res4, resultadoFormated);
+        assertEquals(res4, resultadoFormated);
     }
 
     @Test
     public void anagramaPalindromoTest() {
         String resultadoAnagramaPalindromo = AnagramaPalindromo.anagramaPalindromo(string5);
-        TestCase.assertEquals(res5, resultadoAnagramaPalindromo);
+        assertEquals(res5, resultadoAnagramaPalindromo);
     }
-
 }
+

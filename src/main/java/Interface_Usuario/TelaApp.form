@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Interface_Usuario.TelaApp">
+  <grid id="27dc6" binding="tela_App" layout-manager="GridLayoutManager" row-count="7" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="15" left="15" bottom="15" right="15"/>
+    <constraints>
+      <xy x="20" y="20" width="600" height="400"/>
+    </constraints>
+    <properties>
+      <autoscrolls value="false"/>
+      <background color="-3355700"/>
+      <enabled value="true"/>
+      <font/>
+      <foreground color="-6298907"/>
+      <minimumSize width="600" height="300"/>
+      <opaque value="true"/>
+      <preferredSize width="600" height="300"/>
+    </properties>
+    <clientProperties>
+      <html.disable class="java.lang.Boolean" value="false"/>
+    </clientProperties>
+    <border type="bevel-lowered" title-justification="2" title-position="5">
+      <size top="10" left="10" bottom="10" right="10"/>
+    </border>
+    <children>
+      <component id="bc8b" class="javax.swing.JLabel" binding="exercicio_Label">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <opaque value="false"/>
+          <text value="Selecione um exercício:"/>
+          <verticalAlignment value="0"/>
+          <verticalTextPosition value="0"/>
+        </properties>
+      </component>
+      <component id="270b7" class="javax.swing.JComboBox" binding="exercicio_Combox">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="10" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <model/>
+        </properties>
+      </component>
+      <component id="98f99" class="javax.swing.JLabel" binding="input_Label">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Digite uma frase ou palavra:"/>
+        </properties>
+      </component>
+      <component id="6062f" class="javax.swing.JTextField" binding="input_Text">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="25"/>
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="88f3c" class="javax.swing.JButton" binding="executar_Button">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Executar"/>
+        </properties>
+      </component>
+      <component id="a7575" class="javax.swing.JLabel" binding="resultado_Label">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Resultado:"/>
+        </properties>
+      </component>
+      <component id="b46db" class="javax.swing.JButton" binding="button_Testes">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Executar Testes Junit"/>
+        </properties>
+      </component>
+      <component id="e1f3e" class="javax.swing.JButton" binding="fechar_Testes">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <text value="Fechar Testes"/>
+          <visible value="false"/>
+        </properties>
+      </component>
+      <scrollpane id="ce992" binding="scrollResultadoText">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <visible value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="75f10" class="javax.swing.JTextArea" binding="resultado_Test">
+            <constraints/>
+            <properties>
+              <autoscrolls value="true"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <lineWrap value="false"/>
+              <margin top="5" left="5" bottom="5" right="5"/>
+              <opaque value="true"/>
+              <tabSize value="2"/>
+              <visible value="true"/>
+              <wrapStyleWord value="true"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="578e0" class="javax.swing.JTextField" binding="resultado_Text">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="30"/>
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <horizontalAlignment value="0"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
